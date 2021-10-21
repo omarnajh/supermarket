@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="RIGHT_TO_LEFT" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="marktingprograme.RiportMaterialsellingFXMLController">
+   <children>
+      <BorderPane layoutX="188.0" layoutY="360.0" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="184.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" layoutX="447.0" prefHeight="200.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <Label text="تقرير مبيعات">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </Label>
+                              <DatePicker fx:id="datestart" prefHeight="32.0" promptText="تاريخ البداية" />
+                              <DatePicker fx:id="dataend" layoutX="556.0" layoutY="47.0" prefHeight="32.0" promptText="تاريخ النهاية" />
+                              <TextField fx:id="materialnamecompo">
+                                 <font>
+                                    <Font size="19.0" />
+                                 </font>
+                              </TextField>
+                              <Button mnemonicParsing="false" onAction="#show_Data" text="تقرير">
+                                 <font>
+                                    <Font name="Times New Roman" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <BarChart fx:id="barchart" alternativeColumnFillVisible="true" animated="false" prefHeight="575.0" prefWidth="1280.0" title="حركة المواد" BorderPane.alignment="CENTER">
+              <xAxis>
+                <CategoryAxis label="المواد" side="BOTTOM" tickLabelFill="#0022ff" fx:id="xcatgory" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="ynumber" label="الاعداد" side="LEFT" tickLabelFill="RED" />
+              </yAxis>
+            </BarChart>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

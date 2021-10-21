@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="RIGHT_TO_LEFT" prefHeight="720.0" prefWidth="1280.0" stylesheets="@logingui.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="marktingprograme.SellingHistoryGUIController">
+    <children>
+      <VBox layoutX="998.0" layoutY="122.0" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="SellingHistoryTable" prefHeight="400.0" prefWidth="1900.0">
+              <columns>
+                <TableColumn fx:id="idcel" prefWidth="75.0" text="التسلسل" />
+                <TableColumn fx:id="idInvoicecel" prefWidth="263.0" text="تسلسل الفاتوره" />
+                  <TableColumn fx:id="idMaterialcel" prefWidth="166.0" text="تسلسل المادة" />
+                  <TableColumn fx:id="materialNamecel" prefWidth="189.0" text="اسم المادة" />
+                  <TableColumn fx:id="sellingPricecel" prefWidth="168.0" text="سعر البيع" />
+                  <TableColumn fx:id="countOfSellingcel" prefWidth="200.0" text="الكمية" />
+                  <TableColumn fx:id="sellingTotalPricecel" prefWidth="200.0" text="المجموع" />
+                  <TableColumn fx:id="notecel" prefWidth="200.0" text="الملاحظات" />
+                  <TableColumn fx:id="winTotalPricecel" prefWidth="200.0" text="الربح" />
+                  <TableColumn fx:id="dateOfSellingcel" prefWidth="200.0" text="تاريخ البيع" />
+              </columns>
+            </TableView>
+            <GridPane hgap="5.0" prefHeight="160.0" prefWidth="1280.0" vgap="5.0" VBox.vgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <Label text="تسلسل الفاتوره">
+                           <font>
+                              <Font name="Arial Black" size="22.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="idInvoicetext" alignment="CENTER" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1">
+                     <children>
+                        <Label text="تسلسل المادة">
+                           <font>
+                              <Font name="Arial Black" size="22.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="idMaterialtext" alignment="CENTER" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="437.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="2">
+                     <children>
+                        <Label text="اسم المادة">
+                           <font>
+                              <Font name="Arial Black" size="22.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="materialNametext" alignment="CENTER" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="864.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="سعر البيع">
+                           <font>
+                              <Font name="Arial Black" size="22.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="sellingPricetext" alignment="CENTER" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="66.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="الكمية">
+                           <font>
+                              <Font name="Arial Black" size="22.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="countOfSellingtext" alignment="CENTER" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="440.0" layoutY="69.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <children>
+                        <Label text="المجموع">
+                           <font>
+                              <Font name="Arial Black" size="22.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="sellingTotalPricetext" alignment="CENTER" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="865.0" layoutY="80.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.rowIndex="2">
+                     <children>
+                        <Label text="الملاحظات">
+                           <font>
+                              <Font name="Arial Black" size="22.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="notetext" alignment="CENTER" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="145.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Label text="الربح">
+                           <font>
+                              <Font name="Arial Black" size="22.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="winTotalPricetext" alignment="CENTER" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="440.0" layoutY="145.0" prefHeight="100.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <children>
+                        <Label text="تاريخ البيع">
+                           <font>
+                              <Font name="Arial Black" size="22.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dateOfSellingtext" alignment="CENTER" HBox.hgrow="ALWAYS">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <children>
+                        <Label text="مجموع المبيعات :">
+                           <font>
+                              <Font name="Arial Black" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="TotalLabel" layoutX="10.0" layoutY="20.0" text="totalelbel">
+                           <font>
+                              <Font name="Arial Black" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="15.0" layoutY="162.0" spacing="10.0" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <children>
+                        <Label text="مجموع الارباح :">
+                           <font>
+                              <Font name="Arial Black" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="winTotallebal" layoutX="10.0" layoutY="20.0" text="totalelbel">
+                           <font>
+                              <Font name="Arial Black" size="16.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </GridPane>
+            <HBox alignment="CENTER" prefWidth="1280.0" spacing="50.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="serchBut" layoutX="750.0" layoutY="74.0" mnemonicParsing="false" onAction="#serchButEvent" prefHeight="80.0" prefWidth="200.0" styleClass="button_m" text="بحث">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="exportdatabut" layoutX="925.0" layoutY="30.0" mnemonicParsing="false" onAction="#exportdatabutEvent" prefHeight="80.0" prefWidth="200.0" styleClass="button_m" text="استخراج">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="imoprtdatabut" layoutX="1050.0" layoutY="30.0" mnemonicParsing="false" onAction="#imoprtdatabutEvent" prefHeight="80.0" prefWidth="200.0" styleClass="button_m" text="ادخال المواد">
+                     <font>
+                        <Font name="Arial Black" size="20.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+   <styleClass>
+      <String fx:value="body" />
+      <String fx:value="tab" />
+   </styleClass>
+</AnchorPane>

@@ -1,0 +1,19 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+
+.body{
+    -fx-background-color: #fff;
+}
+.textfelid{
+    -fx-background-radius: 30;
+}
+.button{
+    -fx-background-color: #fff;
+    -fx-background-radius: 30;
+}
+.button:hover{
+    -fx-background-color: #aaa;
+    -fx-background-radius: 30;
+}

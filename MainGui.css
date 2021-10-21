@@ -1,0 +1,36 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 14, 2020, 3:31:52 PM
+    Author     : omar
+*/
+
+.body{
+    -fx-background-color: rgb(236,236,236);
+}
+.button{
+    -fx-background-color: #fff;
+    -fx-border-color: #555;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-text-fill: #111;
+}
+.button:hover{
+    -fx-background-color: #fff;
+    -fx-border-color: #555;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-text-fill: #111;
+    -fx-effect: dropshadow(gaussian, #b4d1f3, 3, 3, 0, 0);
+}
+.button:focused{
+    -fx-background-color: #fff;
+    -fx-border-color: #555;
+    -fx-background-radius: 20;
+    -fx-border-radius: 20;
+    -fx-text-fill: #111;
+    -fx-effect: dropshadow(gaussian, #b4d1f3, 3, 3, 0, 0);
+}

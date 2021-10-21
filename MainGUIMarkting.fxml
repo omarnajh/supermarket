@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" nodeOrientation="RIGHT_TO_LEFT" prefHeight="720.0" prefWidth="1280.0" styleClass="body" stylesheets="@logingui.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="marktingprograme.MainGUIMarktingController">
+   <children>
+      <BorderPane layoutX="784.0" layoutY="67.0" prefHeight="720.0" prefWidth="1280.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="LabelTital" styleClass="text" text="Label">
+                     <font>
+                        <Font name="Arial Black" size="30.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.7548076923076923" endY="1.0" startX="0.7644230769230769">
+                           <stops>
+                              <Stop color="#030303" />
+                              <Stop color="#030303d7" offset="0.007518796992481203" />
+                              <Stop color="#cf0e0ed4" offset="0.5075187969924808" />
+                              <Stop color="#0000007b" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TitledPane alignment="CENTER" expanded="false" maxHeight="1.7976931348623157E308" prefHeight="688.0" prefWidth="275.0" styleClass="tab" text="الفواتير" HBox.hgrow="ALWAYS">
+                     <content>
+                        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="300.0" spacing="10.0">
+                           <children>
+                              <Button fx:id="showinvoicesbut" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#showinvoicesbutEvent" styleClass="button_m" text="عرض الفواتير">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="Invoicesbut" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#InvoicesbutEvent" styleClass="button_m" text="الفواتير">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                     <font>
+                        <Font name="Arial Black" size="22.0" />
+                     </font>
+                  </TitledPane>
+                  <TitledPane alignment="CENTER" maxHeight="1.7976931348623157E308" prefWidth="275.0" styleClass="tab" text="المبيعات" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Arial Black" size="22.0" />
+                     </font>
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <Button fx:id="PayBut" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#PayButEvent" styleClass="button_m" text="شاشة البيع">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="SellingHistorybut" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#SellingHistorybutEvent" styleClass="button_m" text="تاريخ المبيعات">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="TotalCostmerbut" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#TotalCostmerbutEvent" styleClass="button_m" text="الزبائن">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="TotalPremiumsbut" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#TotalPremiumsbutEvent" styleClass="button_m" text="الدفعات بالاقساط">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="15.0" layoutY="180.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#TotaleRiportSellingEvent" styleClass="button_m" text="تقارير الارباح">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button layoutX="15.0" layoutY="235.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#RiportMaterialsellingFXMLEvent" styleClass="button_m" text="تقارير حركة المبيعات">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                  <TitledPane alignment="CENTER" expanded="false" maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="275.0" styleClass="tab" text="اخرى" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Arial Black" size="22.0" />
+                     </font>
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                           <children>
+                              <Button fx:id="SettingSystembut" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#SettingSystembutEvent" styleClass="button_m" text="اعدادات النظام">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="TotalExpensesbut" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#TotalExpensesbutEvent" styleClass="button_m" text="المصروفات">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="cobyof" layoutX="15.0" layoutY="125.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#copyOfEvent" styleClass="button_m" text="استخراج نسخة احتياطية">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="pastof" layoutX="15.0" layoutY="180.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#pastOfEvent" styleClass="button_m" text="ادخال نسخة احتياطية">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="TotalPoshbut" layoutX="15.0" layoutY="125.0" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#TotalePoshbutEvent" styleClass="button_m" text="الديون على المحل">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+                  <TitledPane expanded="false" maxHeight="1.7976931348623157E308" prefHeight="200.0" prefWidth="275.0" styleClass="tab" text="المواد" HBox.hgrow="ALWAYS">
+                     <font>
+                        <Font name="Arial Black" size="22.0" />
+                     </font>
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <Button fx:id="Materialbut" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#MaterialbutEvent" styleClass="button_m" text="ادخال المواد">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="Mostbut" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#MostbutEvent" styleClass="button_m" text="المستودعات" VBox.vgrow="ALWAYS">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="TotalePurchasesbut" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#TotalePurchasesbutEvent" styleClass="button_m" text="الموردين">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </TitledPane>
+               </children>
+            </HBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
